@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "title": "Budín de limón",
+    "description": "Budín casero con glaseado de limón",
+    "code": "BUD001",
+    "price": 2500,
+    "status": true,
+    "stock": 10,
+    "category": "pastelería",
+    "thumbnails": [
+      "https://example.com/img/budin-limon.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Alfajores de maicena",
+    "description": "Alfajores rellenos con dulce de leche y coco",
+    "code": "ALF002",
+    "price": 900,
+    "status": true,
+    "stock": 30,
+    "category": "pastelería",
+    "thumbnails": [
+      "https://example.com/img/alfajores-maicena.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Box desayuno",
+    "description": "Box con desayuno completo: budín, cookies, jugo y café",
+    "code": "BOX003",
+    "price": 3500,
+    "status": true,
+    "stock": 5,
+    "category": "box",
+    "thumbnails": [
+      "https://example.com/img/box-desayuno.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Cookies de chocolate",
+    "description": "Cookies caseras con chips de chocolate",
+    "code": "COO004",
+    "price": 1000,
+    "status": true,
+    "stock": 20,
+    "category": "pastelería",
+    "thumbnails": [
+      "https://example.com/img/cookies-chocolate.jpg"
+    ]
+  }
+]
