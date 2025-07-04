@@ -15,4 +15,3 @@ Este proyecto contiene un servidor en Node.js con Express que maneja productos y
 - `POST /api/carts`
 - `GET /api/carts/:cid`
 - `POST /api/carts/:cid/product/:pid`
-

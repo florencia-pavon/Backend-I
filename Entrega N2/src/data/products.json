@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "title": "Cookie Brownie",
+    "description": "Cookie intensa de chocolate tipo brownie",
+    "code": "COOKIE001",
+    "price": 800,
+    "status": true,
+    "stock": 20,
+    "category": "cookies",
+    "thumbnails": [
+      "/multimedia/cookies/brownie.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Cookie de Canela",
+    "description": "Cookie suave con toque de canela y azúcar",
+    "code": "COOKIE002",
+    "price": 750,
+    "status": true,
+    "stock": 25,
+    "category": "cookies",
+    "thumbnails": [
+      "/multimedia/cookies/canela.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Cookie Carrot",
+    "description": "Cookie de zanahoria con nueces y especias",
+    "code": "COOKIE003",
+    "price": 820,
+    "status": true,
+    "stock": 18,
+    "category": "cookies",
+    "thumbnails": [
+      "/multimedia/cookies/carrot.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Cookie Chip",
+    "description": "Cookie clásica con chips de chocolate",
+    "code": "COOKIE004",
+    "price": 790,
+    "status": true,
+    "stock": 30,
+    "category": "cookies",
+    "thumbnails": [
+      "/multimedia/cookies/chip.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Cookie Pistacho",
+    "description": "Cookie con trozos de pistacho y chocolate blanco",
+    "code": "COOKIE005",
+    "price": 880,
+    "status": true,
+    "stock": 15,
+    "category": "cookies",
+    "thumbnails": [
+      "/multimedia/cookies/pistacho.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Cookie Red Velvet",
+    "description": "Cookie de red velvet con chips de chocolate blanco",
+    "code": "COOKIE006",
+    "price": 850,
+    "status": true,
+    "stock": 22,
+    "category": "cookies",
+    "thumbnails": [
+      "/multimedia/cookies/red.jpg"
+    ]
+  }
+]
