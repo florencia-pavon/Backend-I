@@ -9,6 +9,7 @@ import viewsRouter from './routes/views.router.js';
 import productsRouter from './routes/products.js';
 import cartsRouter from './routes/carts.js';
 import ProductModel from './models/product.model.js';
+import Handlebars from 'handlebars';
 
 // Configuración de entorno
 dotenv.config();
@@ -27,7 +28,15 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => console.error('Error conectando a MongoDB:', err));
 
 // Configuración de Handlebars
-app.engine('handlebars', engine());
+app.engine('handlebars', engine({
+  handlebars: Handlebars,
+  layoutsDir: path.join(__dirname, 'views/layouts'),
+  defaultLayout: 'main',
+  runtimeOptions: {
+    allowProtoPropertiesByDefault: true,
+    allowProtoMethodsByDefault: true,
+  }
+}));
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views'));
 
