@@ -6,7 +6,7 @@
       {{#each cart.products}}
         <div class="col-md-4 mb-4">
           <div class="card h-100">
-            <img src="{{this.product.thumbnails.[0]}}" class="card-img-top" alt="{{this.product.title}}">
+            <img src="/{{this.product.thumbnails.[0]}}" class="card-img-top" alt="{{this.product.title}}">
             <div class="card-body">
               <h5 class="card-title">{{this.product.title}}</h5>
               <p class="card-text">{{this.product.description}}</p>
@@ -16,6 +16,7 @@
           </div>
         </div>
       {{/each}}
+      <a href="/" class="btn btn-secondary mt-2">Volver a la lista</a>
     </div>
   {{else}}
     <p class="text-center">Tu carrito está vacío.</p>

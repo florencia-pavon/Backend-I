@@ -4,12 +4,43 @@ import CartModel from '../models/cart.model.js';
 
 const router = Router();
 
-// Vista Home con todos los productos
+// Vista Home con productos paginados
 router.get('/', async (req, res) => {
   try {
-    const productos = await ProductModel.find().lean();
-    res.render('home', { title: 'Home', productos });
+    const { limit = 3, page = 1, sort, query } = req.query;
+
+    const filtro = {};
+
+    if (query) {
+      if (query.startsWith('category=')) {
+        filtro.category = query.split('=')[1];
+      } else if (query.startsWith('available=')) {
+        const disponible = query.split('=')[1] === 'true';
+        filtro.stock = disponible ? { $gt: 0 } : 0;
+      }
+    }
+
+    const options = {
+      page: parseInt(page),
+      limit: parseInt(limit),
+      sort: sort === 'asc' ? { price: 1 } : sort === 'desc' ? { price: -1 } : undefined,
+      lean: true
+    };
+
+    const result = await ProductModel.paginate(filtro, options);
+
+    res.render('home', {
+      title: 'Home',
+      productos: result.docs,
+      page: result.page,
+      totalPages: result.totalPages,
+      hasPrevPage: result.hasPrevPage,
+      hasNextPage: result.hasNextPage,
+      prevLink: result.hasPrevPage ? `/?page=${result.prevPage}` : null,
+      nextLink: result.hasNextPage ? `/?page=${result.nextPage}` : null
+    });
   } catch (error) {
+    console.error('Error al obtener productos paginados:', error);
     res.status(500).send('Error al obtener productos');
   }
 });
